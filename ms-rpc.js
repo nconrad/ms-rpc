@@ -49,7 +49,7 @@ angular.module('ms-rpc', [])
                 $delegate.post(url, data, config)
                      .then(function(response) {
                         // only handle actual data
-                        return deferred.resolve(response.data.result[0]);
+                        return deferred.resolve(response.data.result ? response.data.result[0] : null);
                      }).catch(function(error) {
                         return deferred.reject(error.data);
                      })
