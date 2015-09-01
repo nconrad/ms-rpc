@@ -28,7 +28,6 @@ angular.module('ms-rpc', [])
                     var url = $config.services.ws_url;
                     var method = 'Workspace.'+method;
                 } else if (service == 'ms') {
-                    console.log('make request')
                     var url = $config.services.ms_url;
                     var method = 'ProbModelSEED.'+method;
                 }
