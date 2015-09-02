@@ -30,6 +30,9 @@ angular.module('ms-rpc', [])
                 } else if (service == 'ms') {
                     var url = $config.services.ms_url;
                     var method = 'ProbModelSEED.'+method;
+                } else if (service == 'app') {
+                    var url = $config.services.app_url;
+                    var method = 'AppService.'+method;
                 }
 
                 var data = {version: "1.1",
