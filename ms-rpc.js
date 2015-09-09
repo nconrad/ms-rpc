@@ -33,6 +33,9 @@ angular.module('ms-rpc', [])
                 } else if (service == 'app') {
                     var url = $config.services.app_url;
                     var method = 'AppService.'+method;
+                } else if (service == 'msSupport') {
+                    var url = $config.services.ms_support_url;
+                    var method = 'MSSeedSupportServer.'+method;
                 }
 
                 var data = {version: "1.1",
